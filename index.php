@@ -6,7 +6,11 @@ $paragraph = 'Hello World in php :D censuraquesto';
 // ?badword=censuraquesto
 $badword = $_GET['badword'];
 // funzione per rimpiazzare una stringa  accetta in ingresso (parola da censurare ,con cosa voglio rimpiazzare , dove si trova questa parola)
-$fix_paragraph = str_replace($badword, '***', $paragraph)
+$fix_paragraph = str_replace($badword, '***', $paragraph);
+// bonus
+// funzione date("Y") prende solo l'anno
+$date = date("Y");
+$myYear = 1999;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +50,18 @@ $fix_paragraph = str_replace($badword, '***', $paragraph)
     <p>
         <?php echo strlen($fix_paragraph)  ?>
     </p>
+    <!-- Bonus -->
     </p>
+    <h1>Anno corrente</h1>
+    <?php echo $date  ?>
+    <hr>
+    <h1>Il mio anno di nascita</h1>
+    <?php echo $myYear ?>
+    <hr>
+    <h1>La mia età è di:</h1>
+    <?php echo $date - $myYear ?>
+
+
 </body>
 
 </html>
